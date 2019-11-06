@@ -1,0 +1,48 @@
+<section id="section1" class="panel">
+    <div class="bio-info">
+        <h1 class="p-name">Brisk Yunus</h1>
+    </div>
+
+</section>
+{{!-- <section id="section2" class="panel">panel 2</section> --}}
+<section id="section3" class="panel">
+    <h1 class="user-panel-heading">
+        Take a Look!
+    </h1>
+
+    <p>
+        Here are my favourite things! I love to do a lot of things but here are three that easily describe who I am. Below you will see the different kinds of things I like.
+    </p>
+
+    <h4>Click on "More Info" for more Description</h4>
+
+    <div class="team">
+        <!-- loop through all our team members and put their info on the page -->
+        {{#each people}}
+        <div class="user-panel">
+            <img src="images/{{avatar}}" alt="user image" class="u-avatar">
+            <a href="{{ID}}" class="u-link">
+                More Info
+            </a>
+
+            <h1>{{Name}}</h1>
+            <h3>{{JobTitle}}</h3>
+        </div>
+        {{/each}}
+    </div>
+    </div>
+
+    <!-- this will be filled in on the client side when we render our AJAX data -->
+    <section class="lightbox">
+        <span class="close">x</span>
+        <div class="sidebar">
+            <img src="" alt="larger bio image">
+        </div>
+
+        <div class="lb-content">
+
+        </div>
+    </section>
+</section>
+<section id="section4" class="panel"></section>
+<section id="section5" class="panel"></section>
